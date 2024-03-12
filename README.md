@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Star Wars Favorites
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React application fetches movies from the Star Wars API (SWAPI) and lets users mark their favorite movies. The goal of this task is to debug the application, improve the styling, and potentially add enhancements.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Star Wars Favorites](#star-wars-favorites)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Installing](#installing)
+  - [SWAPI Documentation](#swapi-documentation)
+  - [Tasks](#tasks)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+These instructions will help you set up the project locally on your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Installing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Unzip the project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the project directory:
+   ```bash
+   cd star-wars-favorites
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application should now be running on [http://localhost:3000/](http://localhost:3000/).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## SWAPI Documentation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Base URL:** `https://swapi.dev/api/`
+- **Relevant Endpoints:**
+  - **Films:** `/films/`
+    - **Method:** `GET`
+    - **Description:** Fetches all the Star Wars films.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For a more in-depth look at the API, please refer to the [official SWAPI documentation](https://swapi.dev/documentation).
 
-## Learn More
+Please notice the the SWAPI API might take some time to respond
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tasks
 
-### Code Splitting
+1. **Debugging:** 
+    - Start the application and identify the 2 errors introduced.
+    - Dive into the codebase and pinpoint the source of each error.
+    - Rectify each error ensuring the application displays and functions correctly.
+    - Offer a concise explanation of the root causes and detail your solutions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Styling:** 
+    - Refactor the application's styling to match the provided [mockup](page_mockup.png)
+    - Ensure the design is responsive and maintains consistency across various screen sizes and browsers.
 
-### Analyzing the Bundle Size
+3. **Improvements:** (Optional)
+    - After implementation of the basic design, you can go ahead and implement any other enhancements or features you feel would optimize the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. **Upload to github:**
+    - Once finished, upload the project to github.
+    - Try to clone your code and run it - make sure all works after cloning
+    - Make sure the site works as expected
