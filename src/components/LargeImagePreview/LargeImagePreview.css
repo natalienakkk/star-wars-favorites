@@ -1,0 +1,63 @@
+.large-image-preview {
+  position: relative;
+  width: 85.5vw; /* Use viewport width to make it responsive */
+  height: 50vh; /* Use viewport height to make it responsive */
+  /* Add some top margin based on viewport height */
+  margin: 5vh auto auto;
+  border-radius: 1vw; /* Use viewport width for responsive border-radius */
+  overflow: hidden;
+}
+
+.large-image-preview img {
+  display: block; /* Removes any space below the image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will cover the container, cropping where necessary */
+  object-position: top;
+  border-radius: 10px;
+}
+
+.large-image-preview .preview-title {
+  position: absolute;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0);
+  left: 10%; /* A percentage of the container's width for responsive positioning */
+  top: 35%;
+  transform: translate(-5%, -50%); /* Adjust horizontal shift */
+  font-size: 3vw;
+  padding: 1vw; /* Padding based on viewport width */
+}
+
+.large-image-preview .preview-title .title-word {
+  display: block; /* Each word takes a new line */
+  margin-bottom: -1vw;
+}
+
+.full-page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.star-icon-container {
+  display: none;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10; /* Make sure it's above other content */
+}
+
+

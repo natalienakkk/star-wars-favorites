@@ -1,42 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { fetchMovies }  from '@/services/api';
-import MovieItem from '@/components/MovieItem/MovieItem';
-import Loading from '@/components/Loading/Loading';
-// import {fetchMovies} from '../../services/api';
-// import MovieItem from '../../components/MovieItem/MovieItem';
-// import Loading from '../../components/Loading/Loading';
+import React from 'react';
+import MovieImage from "@/components/MovieImage/MovieImage";
+import FavoriteMovie from "@/components/FavoriteMovie/FavoriteMovie";
+import './MovieList.css';
 
 
-function MovieList({ onMovieSelect }) {
-  const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    async function getMovies() {
-      try {
-        const data = await fetchMovies();
-        setMovies(data);
-      } catch (error) {
-        console.error("Failed fetching movies:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    getMovies();
-  }, []);
-
+// The MovieList component manages the display of the list of movies.
+function MovieList({movies , setMovie , favorites , handleFavorite}) {
   return (
-    <div>
-        {isLoading ? (
-            <Loading message="Loading Movies..."/>
-        ) : (
-          movies.map(movie => (
-            <MovieItem key={movie.episode_id} movie={movie} onMovieSelect={onMovieSelect} />
-          ))
-        )}
+    <div className="movie-list">
+      {movies.map((movie) => {
+        const isFavorite = favorites.some(fav => fav.title === movie.title);
+        return ( // The container that wraps around the list of movie cards.
+          <div key={movie.title} onMouseEnter={() => setMovie(movie.image)}>
+            <FavoriteMovie
+              movie={movie}
+              isFavorite={isFavorite}
+              handleFavorite={() => handleFavorite(movie)}
+            />
+            <MovieImage
+              movie={movie}
+              isFavorite={isFavorite}
+              handleFavorite={() => handleFavorite(movie)}
+            />
+
+          </div>
+        );
+      })}
     </div>
-);
+  );
 }
+
 
 export default MovieList;

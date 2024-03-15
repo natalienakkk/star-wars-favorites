@@ -1,0 +1,8 @@
+.movie-list {
+  display: flex; /* Creates a row of items */
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items horizontally */
+  align-content: flex-end;
+  gap : 7px;
+  margin: 10px 20px 30px; /* Margin from all directions */
+}

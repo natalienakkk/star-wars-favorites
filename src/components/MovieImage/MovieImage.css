@@ -1,0 +1,54 @@
+.movie-image {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Ensures the pseudo-element does not extend outside the image */
+  border-radius: 10px;
+  margin: 5px;
+  background-size: cover;
+  background-position: center;
+  width: 179px;
+  height: 270px;
+}
+
+.movie-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* rounded corners */
+  object-fit: cover; /* Use cover to ensure the image covers the area without distortion */
+}
+
+.movie-image .movie-title {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  color: white;
+  text-align: center; /* Center the text horizontally */
+  padding: 10px 0; /* Add some padding to the top and bottom */
+  font-size: 0.9em;
+  font-weight: bold;
+  text-shadow: 1px 2px 4px #000000; /* Text shadow for better readability */
+  z-index: 2; /* Ensure the text is above the pseudo-element */
+
+}
+
+
+
+.movie-image::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: rgba(75, 75, 75, 0.03);
+  backdrop-filter: blur(1px); /* Create the blur effect */
+  z-index: 1; /* Below the text */
+}
+
+.star-icon-container {
+  display: none;
+}
+
+
+

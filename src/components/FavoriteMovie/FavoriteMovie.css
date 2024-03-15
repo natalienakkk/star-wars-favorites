@@ -1,0 +1,44 @@
+.star-icon-container {
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.star-icon-container .filled-star {
+  /* The filled star should always be visible if 'isFavorite' is true */
+  color: #ffd700;
+  transform: scale(1.1); /* larger on favorite */
+  animation: pulse 0.6s ease infinite;
+}
+
+.star-icon-container .empty-star {
+  /* The empty star should only be visible on hover, otherwise hidden */
+  color: #ffd700;
+  visibility: hidden;
+}
+
+.movie-image:hover .star-icon-container .empty-star {
+  /* Show the empty star only on hover */
+  visibility: visible;
+}
+
+
+.movie-image .star-icon-container {
+  /* This rule ensures the container itself is always visible, but does not affect the child elements */
+  display: block;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
