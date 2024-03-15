@@ -101,4 +101,4 @@ During the debugging of the Star Wars Favorites application, several errors were
 
 ### How It Works
 - Interaction: Hovering over the movie images with the mouse updates the large preview image and the background dynamically.
-- Favorites Feature: A star icon appears when hovering over a movie image, which allows users to add or remove the movie from their favorites list with a click. When a movie is marked as a favorite, the star icon remains visible on the movie image to indicate its status.
+- Favorites Feature(Improvement): A star icon appears when hovering over a movie image, which allows users to add or remove the movie from their favorites list with a click. When a movie is marked as a favorite, the star icon remains visible on the movie image to indicate its status.
